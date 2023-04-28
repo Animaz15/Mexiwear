@@ -1,0 +1,244 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.productos {
+    background-color: v.$verdeCla;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 2rem;
+
+}
+
+.playera {
+    img {
+        box-shadow: .1rem .2rem .3rem #000;
+    }
+}
+
+.col-productos {
+    color: v.$grisOsc2;
+    @include m.gadget {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    justify-content: center;
+    text-align: center;
+    ul {
+        list-style-position: inside;
+        margin: 2rem auto 5rem auto;
+        font-size: 1.6rem;
+    }
+    gap: 4rem;
+}
+
+
+.title-style-2 {
+    display: block;
+    width: 60%;
+    color: #fff;
+    background-color: v.$grisOsc2;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 4rem auto;
+    text-align: center;
+    box-shadow: -.8rem -1rem 0 v.$verdeGral;
+    .light {
+        font-weight: 300 !important;
+    }
+
+    .bold {
+        font-weight: 500 !important;
+    }
+    h2 {
+        margin: 0;
+    }
+  }
+  
+  .title-style-3 {
+    display: block;
+    width: 60%;
+    color: #fff;
+    background-color: v.$grisOsc2;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 4rem auto;
+    text-align: center;
+    box-shadow: -.8rem -1rem 0 v.$verdeCla;
+    .light {
+        font-weight: 300;
+    }
+    h2 {
+        margin: 0;
+    }
+  }
+
+  .title-style-4 {
+    display: block;
+    width: 60%;
+    color: #fff;
+    background-color: v.$grisOsc2;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 4rem auto;
+    text-align: center;
+    box-shadow: -.8rem -1rem 0 v.$verdeGral;
+    .light {
+        font-weight: 300;
+    }
+    h2 {
+        margin: 0;
+    }
+  }
+  
+  .descripcion-producto {
+    // background-color: rgba(26, 39, 36, 1);
+    color: #2b2a2a;
+    border-radius: 1rem;
+    padding: 0.2rem;
+    text-align: center;
+    ul, li{
+        list-style-type: none;
+        font-size: 2.2rem;
+        font-weight: 500;
+
+    }
+  
+   
+}
+
+.alinear {
+    margin: 0;
+}
+
+
+.playeras {
+ 
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 2rem;
+
+}
+
+.col-playeras {
+    color: v.$grisOsc2;
+    @include m.gadget {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    justify-content: center;
+    text-align: center;
+    ul {
+        list-style-position: inside;
+        margin: 2rem auto 5rem auto;
+        font-size: 1.6rem;
+    }
+    gap: 4rem;
+}
+
+.bottom {
+    margin-bottom: 5rem;
+}
+
+.contenedor-img {
+    position: relative;
+    width: 100%;
+    max-width: 30rem;
+    z-index: 5;
+    
+}
+
+.centrar {
+  
+    display: flex;
+    align-items: center;
+}
+
+.playera {
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+.overlay-img {
+    position: absolute;
+  bottom: 0;
+  background: rgb(6,321,119);
+  background: rgba(6,321,119, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenedor-img:hover .overlay-img {
+
+opacity: 1;
+
+}
+
+.estampados {
+    margin: 5rem;
+}
+
+.contenedor-playeras {
+    color: v.$grisOsc2;
+    @include m.gadget {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    }
+    justify-content: center;
+    text-align: center;
+    ul {
+        list-style-position: inside;
+        margin: 2rem auto 5rem auto;
+        font-size: 1.6rem;
+    }
+    gap: 4rem;
+}
+
+.sobreimagen {
+    position: absolute;
+  bottom: 0;
+  background: rgb(6,321,119);
+  background: rgba(6,321,119, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenedor-shirt {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    z-index: 5;
+    
+    
+}
+
+.contenedor-shirt:hover .sobreimagen {
+
+opacity: 1;
+
+}
+
+.shirts {
+    @include m.gadget {
+        margin: 0;
+    }
+    margin-top: 5rem;
+}

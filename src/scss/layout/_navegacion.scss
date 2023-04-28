@@ -1,0 +1,28 @@
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include gadget {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+// Menu de Hamburguesa
+
+.mobile-menu {
+    display: flex;
+    
+    @include gadget {
+     
+    display: none;
+    }
+
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    display: none;
+}

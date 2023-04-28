@@ -1,0 +1,24 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto {
+    background-color: v.$verdeGral;
+    color: #fff;
+   
+}
+
+.fondo-div {
+    margin: 0;
+    p {
+        color: #fff;
+}
+}
+
+.alinear-contacto {
+    display: grid;
+    grid-template-columns: repeat(2fr, 1)
+}
+
+.datosmexi {
+    
+}

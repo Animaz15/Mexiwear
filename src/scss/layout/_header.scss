@@ -1,0 +1,302 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-color: #ecf0f0;
+    box-shadow: .1rem .2rem .3rem #9e9b9b;
+@include m.gadget {
+    &.fijo {
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+       
+    }
+}
+
+    text-align: center;
+    .contenido-header {
+        // padding: 2rem;
+        @include m.gadget {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+   
+}
+
+.vgral {
+    color: v.$verdeGral;
+}
+
+
+.navegacion-principal{
+   
+    @include m.gadget {
+        display: flex;
+ 
+        gap: 2rem;
+        align-items: center;
+    }
+    a {
+        display: block;
+        color: v.$verdeOsc;
+        font-size: 2.2rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 1rem;
+         @include m.gadget {
+            margin-bottom: 0;
+         }
+        
+        &:hover {
+            color: v.$verdeGral;
+        }
+    }
+    z-index: 10;
+
+    
+
+}  
+
+.navegacion-secundaria{
+    @include m.gadget {
+        display: flex;
+        gap: 2rem;
+    }
+    a {
+        display: block;
+        color: v.$verdeGral;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+         @include m.gadget {
+            margin-bottom: 0;
+         }
+        
+        &:hover {
+            color: #fff;
+        }
+    }
+    z-index: 10;
+}  
+
+
+.logos {
+    // margin-bottom: 3rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include m.gadget {
+        margin-bottom: 0;
+    }
+}
+.botones {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    @include m.gadget {
+       display: flex;
+       justify-content: space-evenly;
+    }
+}
+
+.boton {
+    background-color: v.$verdeGral;
+    color: #fff;
+    font-weight: 600;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: v.$verdeCla;
+        color: #fff;
+    }
+    a {
+        font-size: 3rem !important;
+    }
+}
+
+.boton2 {
+    border: solid 3px v.$verdeGral;
+    color: v.$verdeOsc;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: v.$verdeGral;
+        color: #fff;
+    }
+}
+
+.lang-inact {
+    color: v.$verdeCla;
+    font-weight: 600;
+  
+}
+
+.lang-act {
+    color: v.$verdeLight;
+    font-weight: 600;
+    &:hover{
+        color: v.$verdeCla;
+    }
+}
+
+.check {
+    position: relative;
+    width: 5rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 5rem;
+        height: 2.5rem;
+        background: #656666;
+        border-radius: 2.5rem;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        border-radius: 3rem;
+        background: #fff;
+        
+        transition: 0.25s;
+        border: 2px solid #656666;
+        z-index: 10;
+        // box-sizing: border-box;
+    }
+
+   
+
+    &:checked:before {
+        background: v.$verdeLight;
+    }
+}
+
+.check:checked:after {
+    left: 2rem;
+    border: 2px solid v.$verdeLight;
+}
+
+.flags {
+
+    width: 8rem;
+ display: flex;
+   margin: 0 auto;
+ justify-content: center;
+ 
+
+    //     display: block;
+    //     cursor: pointer;
+    // }
+}
+
+.flags_item {
+    width: 3rem;
+    
+}
+
+.flags_img {
+    // display: block;
+    cursor: pointer;
+}
+
+.blanco {
+    color: #fff;
+    text-shadow: 3px 3px 3px #333;
+}
+
+
+.inicio {
+    background-color: #656666;
+}
+
+// ul {
+//     list-style-type: none;
+//     margin: 0;
+//     padding: 0;
+//     overflow: hidden;
+//     background-color: #333;
+//     display: flex;
+//   }
+
+  
+// li {
+//     float: left;
+//     display: flex;
+//   }
+  
+//   li a, .dropbtn {
+//     display: inline-block;
+//     color: white;
+//     text-align: center;
+//     padding: 14px 16px;
+//     text-decoration: none;
+//   }
+  
+//   li a:hover, .dropdown:hover .dropbtn {
+//     background-color: red;
+//   }
+  
+//   li.dropdown {
+//     display: inline-block;
+//   }
+  
+//   .dropdown-content {
+//     display: none;
+//     position: absolute;
+//     background-color: #f9f9f9;
+//     min-width: 160px;
+//     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+//     z-index: 1;
+//   }
+  
+//   .dropdown-content a {
+//     color: black;
+//     padding: 12px 16px;
+//     text-decoration: none;
+//     display: block;
+//     text-align: left;
+//   }
+  
+//   .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+//   .dropdown:hover .dropdown-content {
+//     display: block;
+//   }
+
+.division {
+    margin: 5rem 0;
+    color: #fff;
+}
+
+.div-menu {
+    display: flex;
+}
+
+.activo {
+    color: v.$verdeGral !important;
+}
+.mexiwear-logo {
+    width: 30rem;
+}
+.berep-logo {
+    img {
+        width: 10rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.chico {
+    width: 20rem;
+    padding: 1rem 0;
+}

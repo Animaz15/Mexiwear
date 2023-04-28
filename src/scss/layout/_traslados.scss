@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.traslados {
+    margin: 10rem 0;
+    h2{
+        margin: 3rem 0 2rem 0;
+        text-align: center;
+        background-color: v.$verdeGral;
+        border-radius: .5rem;
+       color: #fff;
+       padding: 1rem;
+    }
+    
+    img {
+        border: 1rem solid v.$verdeGral;
+        border-radius: 1rem;
+    }
+    
+}
+
+.col-traslados {
+    color: v.$grisOsc2;
+    @include m.gadget {
+        display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    justify-content: center;
+    text-align: center;
+    ul {
+        list-style-position: inside;
+        margin: 2rem auto 5rem auto;
+        font-size: 1.6rem;
+    }
+    gap: 4rem;
+}
